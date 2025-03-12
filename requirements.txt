@@ -59,10 +59,14 @@ click-plugins==1.1.1
     # via celery
 click-repl==0.3.0
     # via celery
+contourpy==1.3.1
+    # via matplotlib
 cssselect2==0.7.0
     # via
     #   cairosvg
     #   weasyprint
+cycler==0.12.1
+    # via matplotlib
 defusedxml==0.7.1
     # via cairosvg
 dnspython==2.7.0
@@ -110,7 +114,9 @@ flask-wtf==1.2.2
     #   flask-security-too
     #   lbrc-flask
 fonttools==4.56.0
-    # via weasyprint
+    # via
+    #   matplotlib
+    #   weasyprint
 greenlet==3.1.1
     # via sqlalchemy
 hatchling==1.27.0
@@ -133,6 +139,8 @@ jsonschema==4.23.0
     # via lbrc-flask
 jsonschema-specifications==2024.10.1
     # via jsonschema
+kiwisolver==1.4.8
+    # via matplotlib
 kombu==5.4.2
     # via celery
 lxml==5.3.1
@@ -150,13 +158,20 @@ markupsafe==3.0.2
     #   mako
     #   werkzeug
     #   wtforms
+matplotlib==3.10.1
+    # via -r requirements.dev
 mdurl==0.1.2
     # via markdown-it-py
+numpy==2.2.3
+    # via
+    #   contourpy
+    #   matplotlib
 openpyxl==3.1.5
     # via lbrc-flask
 packaging==24.2
     # via
     #   hatchling
+    #   matplotlib
     #   pytest
 passlib==1.7.4
     # via flask-security-too
@@ -165,6 +180,7 @@ pathspec==0.12.1
 pillow==11.1.0
     # via
     #   cairosvg
+    #   matplotlib
     #   weasyprint
 pluggy==1.5.0
     # via
@@ -188,6 +204,8 @@ pygments==2.19.1
     # via rich
 pymysql==1.1.1
     # via -r requirements.dev
+pyparsing==3.2.1
+    # via matplotlib
 pyphen==0.17.2
     # via weasyprint
 pytest==8.3.5
@@ -197,6 +215,7 @@ python-dateutil==2.9.0.post0
     #   arrow
     #   celery
     #   lbrc-flask
+    #   matplotlib
 python-dotenv==1.0.1
     # via lbrc-flask
 python-ldap==3.4.4

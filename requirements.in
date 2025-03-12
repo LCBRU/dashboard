@@ -3,3 +3,4 @@ Faker
 pymysql
 pytest
 beautifulsoup4
+matplotlib

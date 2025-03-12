@@ -3,3 +3,4 @@ beautifulsoup4
 -e /home/richard/Projects/lbrc_flask
 Faker
 pymysql
+matplotlib
