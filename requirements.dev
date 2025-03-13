@@ -1,6 +1,6 @@
 pytest
 beautifulsoup4
--e /home/richard/Projects/lbrc_flask
+-e /home/richard/projects/lbrc_flask
 Faker
 pymysql
 matplotlib

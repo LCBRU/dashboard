@@ -1,33 +1,9 @@
-from random import choice, choices
+from random import choice
 from dashboard.model.academics import Academic
 from dashboard.model.projects import ExpectedImpact, MainFundingCategory, MainFundingDhscNihrFunding, MainFundingIndustryCollaborationOrIndustry, MainFundingSource, Methodology, NihrPriorityArea, Project, ProjectStatus, RacsSubcategory, ResearchType, Theme, TrialPhase, UkcrcHealthCategory, UkcrcResearchActivityCode
 from faker.providers import BaseProvider
-from sqlalchemy import select
-from lbrc_flask.database import db
 from faker import Faker
-from lbrc_flask.pytest.faker import LbrcFlaskFakerProvider
-
-
-class FakeCreator():
-    def __init__(self, cls):
-        self.cls = cls
-
-    def get(self, **kwargs):
-        return None
-
-    def get_in_db(self, **kwargs):
-        x = self.get(**kwargs)
-
-        db.session.add(x)
-        db.session.commit()
-
-        return x
-
-    def choice_from_db(self, **kwargs):
-        return choice(list(db.session.execute(select(self.cls)).scalars()))
-
-    def choices_from_db(self, k=1, **kwargs):
-        return choices(list(db.session.execute(select(self.cls)).scalars()), k=k)
+from lbrc_flask.pytest.faker import LbrcFlaskFakerProvider, FakeCreator
 
 
 class LookupFakeCreator(FakeCreator):
